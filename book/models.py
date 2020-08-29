@@ -10,7 +10,7 @@ class TicketInfo(models.Model):
     #movieName = models.CharField(max_length = 100, default="Unknown")
     date = models.CharField(max_length = 10)
     time_hours = models.IntegerField()
-    time_minutes = models.IntegerField()
+    time_minutes = models.IntegerField(default=0)
     time_seconds = models.IntegerField(default=0)
     expired = models.BooleanField(default=False)
 

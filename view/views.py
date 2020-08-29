@@ -67,7 +67,7 @@ def viewTicketDetails(request):
             elif(_date != 'NA'):
                 ticketInfo = TicketInfo.objects.filter(date = _date)
         else:
-            raise("Invalid query")
+            raise Exception("Invalid query")
 
         #* End of select conditions
         if (len(ticketInfo) > 0):
