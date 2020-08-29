@@ -10,6 +10,6 @@ Django server to handle booking, updating and viewing ticket information
 - [x] For a particular timing, a maximum of 20 tickets can be booked
 - [ ] Create a proper readme for your project
 - [x] Delete all the tickets which are expired automatically
-- [ ] Write the tests for all the endpoints
+- [x] Write the tests for all the endpoints
 
 Note: Attach a screenshot of your postman while testing your application
