@@ -30,7 +30,8 @@ def timed_job():
         difference = divmod((_time-current_time).total_seconds(), 3600)[0]
         if(difference < -8):
             print("8 hours old", ticketInfo)
-            ticketInfo.delete()
+            ticketInfo.expired = True   #Diff of 8 hours between the ticket timing and current time
+            ticketInfo.delete() #Delete all the tickets which are expired automatically
 
     #scheduler.shutdown(wait=False)
 

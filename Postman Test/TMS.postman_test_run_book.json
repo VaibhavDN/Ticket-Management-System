@@ -1,0 +1,204 @@
+{
+	"id": "1065e0b7-cd09-480a-b2d5-89a0d13b8fae",
+	"name": "TMS",
+	"timestamp": "2020-08-29T19:03:20.252Z",
+	"collection_id": "04249893-b78b-4934-8547-90efa78c1f67",
+	"folder_id": "54df767d-f87b-4fa4-aed1-c6ef203651cf",
+	"environment_id": "0",
+	"totalPass": 6,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "6c348856-3789-4a1c-87f1-5ef827a92da5",
+			"name": "http://127.0.0.1:8000/book/",
+			"url": "http://127.0.0.1:8000/book/",
+			"time": 24,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Book test1": true
+			},
+			"testPassFailCounts": {
+				"Book test1": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Book test1": true
+				}
+			]
+		},
+		{
+			"id": "641c4345-3a01-45f6-8c26-a2d0c17a5297",
+			"name": "http://127.0.0.1:8000/book/",
+			"url": "http://127.0.0.1:8000/book/",
+			"time": 24,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Book test2": true
+			},
+			"testPassFailCounts": {
+				"Book test2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Book test2": true
+				}
+			]
+		},
+		{
+			"id": "f426c0a0-ed42-4f2c-8c73-ceca27b9b12d",
+			"name": "http://127.0.0.1:8000/book/",
+			"url": "http://127.0.0.1:8000/book/",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Book test3": true
+			},
+			"testPassFailCounts": {
+				"Book test3": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Book test3": true
+				}
+			]
+		},
+		{
+			"id": "a22d69f4-f1c8-4f34-a152-57940f16f99e",
+			"name": "http://127.0.0.1:8000/book/",
+			"url": "http://127.0.0.1:8000/book/",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Book test4": true
+			},
+			"testPassFailCounts": {
+				"Book test4": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Book test4": true
+				}
+			]
+		},
+		{
+			"id": "97d4b678-ad4f-42e9-ae8a-90971efc3ba0",
+			"name": "http://127.0.0.1:8000/book/",
+			"url": "http://127.0.0.1:8000/book/",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Book test5": true
+			},
+			"testPassFailCounts": {
+				"Book test5": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Book test5": true
+				}
+			]
+		},
+		{
+			"id": "7acbd144-42ac-4088-ab1a-6abeb72e8ecb",
+			"name": "http://127.0.0.1:8000/book/",
+			"url": "http://127.0.0.1:8000/book/",
+			"time": 25,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Book test6": true
+			},
+			"testPassFailCounts": {
+				"Book test6": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				25
+			],
+			"allTests": [
+				{
+					"Book test6": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 89,
+	"collection": {
+		"requests": [
+			{
+				"id": "6c348856-3789-4a1c-87f1-5ef827a92da5",
+				"method": "POST"
+			},
+			{
+				"id": "641c4345-3a01-45f6-8c26-a2d0c17a5297",
+				"method": "POST"
+			},
+			{
+				"id": "f426c0a0-ed42-4f2c-8c73-ceca27b9b12d",
+				"method": "POST"
+			},
+			{
+				"id": "a22d69f4-f1c8-4f34-a152-57940f16f99e",
+				"method": "POST"
+			},
+			{
+				"id": "97d4b678-ad4f-42e9-ae8a-90971efc3ba0",
+				"method": "POST"
+			},
+			{
+				"id": "7acbd144-42ac-4088-ab1a-6abeb72e8ecb",
+				"method": "POST"
+			}
+		]
+	}
+}

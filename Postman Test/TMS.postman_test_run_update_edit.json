@@ -1,0 +1,142 @@
+{
+	"id": "de92ebce-b01c-46a0-9e0c-bb6714d64495",
+	"name": "TMS",
+	"timestamp": "2020-08-29T18:59:07.231Z",
+	"collection_id": "04249893-b78b-4934-8547-90efa78c1f67",
+	"folder_id": "7947e2ff-7643-4d40-84d9-2391c5315feb",
+	"environment_id": "0",
+	"totalPass": 4,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "5de180b0-6a81-4f8f-ab69-53699304fd9a",
+			"name": "http://127.0.0.1:8000/update/",
+			"url": "http://127.0.0.1:8000/update/edit/",
+			"time": 35,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Update test1": true
+			},
+			"testPassFailCounts": {
+				"Update test1": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				35
+			],
+			"allTests": [
+				{
+					"Update test1": true
+				}
+			]
+		},
+		{
+			"id": "1cee6e6c-5897-4052-8030-ef68a2b83985",
+			"name": "http://127.0.0.1:8000/update/edit/",
+			"url": "http://127.0.0.1:8000/update/edit/",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Update test2": true
+			},
+			"testPassFailCounts": {
+				"Update test2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Update test2": true
+				}
+			]
+		},
+		{
+			"id": "564cf08d-a295-4c2e-a0ac-8ccb51f97345",
+			"name": "http://127.0.0.1:8000/update/edit/",
+			"url": "http://127.0.0.1:8000/update/edit/",
+			"time": 54,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Update test3": true
+			},
+			"testPassFailCounts": {
+				"Update test3": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				54
+			],
+			"allTests": [
+				{
+					"Update test3": true
+				}
+			]
+		},
+		{
+			"id": "d1388e0a-62b0-497e-85f4-47781a575da2",
+			"name": "http://127.0.0.1:8000/update/edit/",
+			"url": "http://127.0.0.1:8000/update/edit/",
+			"time": 34,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Update test4": true
+			},
+			"testPassFailCounts": {
+				"Update test4": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				34
+			],
+			"allTests": [
+				{
+					"Update test4": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 128,
+	"collection": {
+		"requests": [
+			{
+				"id": "5de180b0-6a81-4f8f-ab69-53699304fd9a",
+				"method": "POST"
+			},
+			{
+				"id": "1cee6e6c-5897-4052-8030-ef68a2b83985",
+				"method": "POST"
+			},
+			{
+				"id": "564cf08d-a295-4c2e-a0ac-8ccb51f97345",
+				"method": "POST"
+			},
+			{
+				"id": "d1388e0a-62b0-497e-85f4-47781a575da2",
+				"method": "POST"
+			}
+		]
+	}
+}
