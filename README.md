@@ -46,7 +46,7 @@ Delete ticket
 
     /update/delete/
     
-#### View endpoint
+### View endpoint
 Fields
 * query (Required field)
 * id (Required if query is set to "id")
@@ -245,3 +245,50 @@ Currently there are 3 types of supported queries
 
 ****
 
+### Book endpoint
+#### Note there can NOT be more than 20 entries at a given time
+Fields:
+- firstname (Required)
+- lastname (Required)
+- phone_number (Required)
+- date (Required)
+- time (Required)
+
+    Query example
+    
+        {
+            "firstname": "Ishan",
+            "lastname": "Dixit",
+            "phone_number": 9927898022,
+            "date": "12-09-2020",
+            "time": "21:00:0"
+        }
+        
+    Query result (Success: Returns ticket id of the newly created ticket)
+    
+        {
+            "status": true,
+            "message": "Success",
+            "id": "70a67513-51cd-4487-87eb-817aa9a07a53"
+        }
+    
+    Some queries return error some common ones are:
+    
+    Query result (Failure: 20 entries already exist for this time)
+    
+        {
+            "status": false,
+            "message": "20 entries already exist for this time"
+        }
+        
+    Query result (Failure: If one or more parameters are missing)
+    
+        {
+            "status": false,
+            "message": "Missing required parameters"
+        }
+
+****
+
+### Update endpoint
+Fields:
