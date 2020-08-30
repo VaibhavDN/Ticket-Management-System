@@ -110,7 +110,7 @@ Currently there are 3 types of supported queries
             "time": "9:00:00"
         }
         
-    Query result 1
+    Query result 1 (All the tickets having date 1-09-2020 and time 9:00:00 are returned)
     
         [
             {
@@ -136,3 +136,60 @@ Currently there are 3 types of supported queries
                 "expired": false
             }
         ]
+        
+<table>
+    <tr>
+        <td> Query example 2 </td>
+        <td> Query result 2 (All the tickets having date 1-09-2020 and any time are returned) </td>
+    </tr>
+    <tr>
+        <td>
+    
+    {
+        "query": "datetime",
+        "date": "1-09-2020"
+    }
+        
+   </td>
+    
+   <td>
+    
+    [
+        {
+            "ticketId": "86817bc1-1b27-4aa7-884d-7781cf0de5ac",
+            "firstname": "Vaibhav",
+            "lastname": "Dwivedi",
+            "phone_number": 1234567890,
+            "date": "1-09-2020",
+            "time_hours": 18,
+            "time_minutes": 0,
+            "time_seconds": 0,
+            "expired": false
+        },
+        {
+            "ticketId": "cf5b7944-e4cc-4dd3-aab4-55e84fc03616",
+            "firstname": "Saksham",
+            "lastname": "Modi",
+            "phone_number": 1128789022,
+            "date": "1-09-2020",
+            "time_hours": 9,
+            "time_minutes": 0,
+            "time_seconds": 0,
+            "expired": false
+        },
+        {
+            "ticketId": "0f42d9c8-5eb9-4a80-8a8f-112bb5c572a7",
+            "firstname": "Varun",
+            "lastname": "Mittal",
+            "phone_number": 5558789022,
+            "date": "1-09-2020",
+            "time_hours": 9,
+            "time_minutes": 0,
+            "time_seconds": 0,
+            "expired": false
+        }
+    ]
+        
+   </td>
+   </tr>
+</table>
