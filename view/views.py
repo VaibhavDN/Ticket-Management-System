@@ -23,7 +23,9 @@ def viewTicketDetails(request):
             id = json_data['id']
             ticketInfo = TicketInfo.objects.filter(ticketId = id)
         elif(query == 'datetime'):
+            
             _date = 'NA'
+
             if 'date' in json_data:
                 _dateList = json_data['date'].split('-')
                 if(len(_dateList) != 3):
@@ -53,9 +55,15 @@ def viewTicketDetails(request):
                     if(not (_hours.isnumeric() and _minutes.isnumeric() and _seconds.isnumeric())):
                         raise Exception('Incorrect time format')
                     if(_date != 'NA'):
-                        ticketInfo = TicketInfo.objects.filter(date = _date).filter(time_hours = _hours).filter(time_minutes = _minutes).filter(time_seconds = _seconds)
+                        ticketInfo = TicketInfo.objects.filter(date = _date)
+                        ticketInfo.filter(time_hours = _hours)
+                        ticketInfo.filter(time_minutes = _minutes)
+                        ticketInfo.filter(time_seconds = _seconds)
                     else:    
-                        ticketInfo = TicketInfo.objects.filter(time_hours = _hours).filter(time_minutes = _minutes).filter(time_seconds = _seconds)
+                        ticketInfo = TicketInfo.objects.filter(time_hours = _hours)
+                        ticketInfo.filter(time_minutes = _minutes)
+                        ticketInfo.filter(time_seconds = _seconds)
+
                 #* If hours and minutes are available
                 elif(len(_timeList) == 2):
                     _hours = _timeList[0]
@@ -63,18 +71,24 @@ def viewTicketDetails(request):
                     if(not (_hours.isnumeric() and _minutes.isnumeric())):
                         raise Exception('Incorrect time format')
                     if(_date != 'NA'):
-                        ticketInfo = TicketInfo.objects.filter(date = _date).filter(time_hours = _hours).filter(time_minutes = _minutes)
+                        ticketInfo = TicketInfo.objects.filter(date = _date)
+                        ticketInfo.filter(time_hours = _hours)
+                        ticketInfo.filter(time_minutes = _minutes)
                     else:
-                        ticketInfo = TicketInfo.objects.filter(time_hours = _hours).filter(time_minutes = _minutes)
+                        ticketInfo = TicketInfo.objects.filter(time_hours = _hours)
+                        ticketInfo.filter(time_minutes = _minutes)
+
                 #* If only hours are available
                 elif(len(_timeList) == 1):
                     _hours = _timeList[0]
                     if(not (_hours.isnumeric())):
                         raise Exception('Incorrect time format')
                     if(_date != 'NA'):
-                        ticketInfo = TicketInfo.objects.filter(date = _date).filter(time_hours = _hours)
+                        ticketInfo = TicketInfo.objects.filter(date = _date)
+                        ticketInfo.filter(time_hours = _hours)
                     else:
                         ticketInfo = TicketInfo.objects.filter(time_hours = _hours)
+
             elif(_date != 'NA'):
                 ticketInfo = TicketInfo.objects.filter(date = _date)
         else:
