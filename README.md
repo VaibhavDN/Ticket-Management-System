@@ -317,6 +317,12 @@ Fields:
             "message": "20 entries already exist for this time"
         }
         
+    <details><summary>Click here to view the screenshot</summary>
+        <p align="center">
+            <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/morethantwenty.jpg">
+        </p>
+    </details>
+        
     Query result (Failure: If one or more parameters are missing)
     
         {
@@ -431,6 +437,59 @@ To start the scheduler run:
 
 ### Postman Tests
 Postman tests are exported in Postman Task directory. Below are some screenshots.
+
+- Book collection
+
+<details><summary>Click here to view the screenshot</summary>
+    <p align="center">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/PM%20collections/postman_book_collection.jpg">
+    </p>
+</details>
+
+- Update collection
+
+<details><summary>Click here to view the screenshot</summary>
+    <p align="center">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/PM%20collections/postman_edit_collection.jpg">
+    </p>
+</details>
+
+- View collection
+
+<details><summary>Click here to view the screenshot</summary>
+    <p align="center">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/PM%20collections/postman_view_collection.jpg">
+    </p>
+</details>
+
+- View tests
+
+<details><summary>Click here to view the screenshot</summary>
+    <p align="center">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/view/viewTest.jpg">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/view/viewTest2.jpg">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/view/viewTest3.jpg">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/view/viewTest4.jpg">
+    </p>
+</details>
+
+- Book tests
+
+<details><summary>Click here to view the screenshot</summary>
+    <p align="center">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/book/bookFailedTestDate.jpg">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/book/bookSuccessTest.jpg">
+    </p>
+</details>
+
+- Update tests
+
+<details><summary>Click here to view the screenshot</summary>
+    <p align="center">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/edit/updateEditTest1.jpg">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/edit/updateEditTest2.jpg">
+    </p>
+</details>
 
 
 ### Some common error messages
