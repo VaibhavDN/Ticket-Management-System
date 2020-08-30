@@ -358,3 +358,22 @@ Note:
         
 ****
 
+### Scheduler [Advanced Python Scheduler]
+The APScheduler is used to mark and delete the tickets older than 8 hours (scheduledTask.py).
+
+Why APScheduler?
+As highlighted in the official documentation, "APScheduler can be used as a cross-platform, application specific replacement to platform specific schedulers, such as the cron daemon or the Windows task scheduler."
+
+It is cross-platform, light-weight python scheduler which is exactly what we needed.
+
+The scheduler is currently scheduled to run every 1 minute. It calculates the difference between the "time of the ticket" and the "current time" for each entry in the database. If the difference is less than -8 the ticket is marked as expired and deleted.
+
+To start the scheduler run:
+
+    python scheduledTask.py
+    
+****
+
+
+
+
