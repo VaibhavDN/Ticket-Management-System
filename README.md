@@ -14,6 +14,15 @@ Django server to handle booking, updating and viewing ticket information
 
 Note: Attach a screenshot of your postman while testing your application
 
+Server is hosted at heroku: https://tmsvaibhav.herokuapp.com/panel/book/
+
+#### Endpoints:
+- Book: https://tmsvaibhav.herokuapp.com/book/
+- View: https://tmsvaibhav.herokuapp.com/view/
+- Update: https://tmsvaibhav.herokuapp.com/update/edit/
+- Delete: https://tmsvaibhav.herokuapp.com/update/delete/
+- Demo site: https://tmsvaibhav.herokuapp.com/panel/book/
+
 #### Some useful information
 - Server: Django
 - Database: SQLite
