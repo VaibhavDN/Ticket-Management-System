@@ -16,7 +16,7 @@ Note: Attach a screenshot of your postman while testing your application
 
 Server is hosted at heroku: https://tmsvaibhav.herokuapp.com/panel/book/
 
-#### Endpoints:
+#### Endpoints: (POST requests only)
 - Book: https://tmsvaibhav.herokuapp.com/book/
 - View: https://tmsvaibhav.herokuapp.com/view/
 - Update: https://tmsvaibhav.herokuapp.com/update/edit/
