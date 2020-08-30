@@ -366,7 +366,7 @@ As highlighted in the official documentation, "APScheduler can be used as a cros
 
 It is cross-platform, light-weight python scheduler which is exactly what we needed.
 
-The scheduler is currently scheduled to run every 1 minute. It calculates the difference between the "time of the ticket" and the "current time" for each entry in the database. If the difference is less than -8 the ticket is marked as expired and deleted.
+The scheduler is currently scheduled to run every 1 minute. It calculates the difference between the "time of the ticket" and the "current time" for each entry in the database. If the difference is less than -8 the ticket is marked as expired and deleted. Scheduler needs to be started only once.
 
 To start the scheduler run:
 
@@ -374,6 +374,68 @@ To start the scheduler run:
     
 ****
 
+### Postman Tests
+Postman tests are exported in Postman Task directory. Below are some screenshots.
 
+
+### Some common error messages
+
+#### Incorrect time format
+
+Time must be specified in one of these 3 formats
+1. 12:30:50 (HH:MM:SS)
+2. 12:30 (HH:MM)
+3. 12 (HH)
+
+Note: HH, MM and SS all must be integers
+
+Else an error message like the following will be returned
+
+Error:
+
+    {
+        "status": false,
+        "message": "Incorrect time format"
+    }
+
+#### Incorrect date format
+
+Date must be specified strictly in the following format
+1. 31-08-2020 (dd-mm-yyyy)
+
+Note: dd, mm and yyyy all must be integers
+
+Else an error message like the following will be returned
+
+Error:
+
+    {
+        "status": false,
+        "message": "Incorrect date format. Should be dd-mm-yyyy"
+    }
+
+#### Invalid phone number
+Phone number must be of 10 digits
+
+Else an error message like the following will be returned
+
+Error:
+
+    {
+        "status": false,
+        "message": "Phone number must be of 10 digits"
+    }
+    
+#### Id not found
+If id specified is not present in the database following error message will be returned
+
+Error:
+
+    {
+        "status": false,
+        "message": "Id not found"
+    }
+    
+****
 
 
