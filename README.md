@@ -438,4 +438,12 @@ Error:
     
 ****
 
+### Booking site demo [/panel/book/]
+Visit /panel/book/ to run the demo site.
 
+Site demonstrates how to take input from the user using a HTML form and POST the form details after converting them to JSON format.
+
+Site takes name, date and time from the user as input and returns ticket ID of the newly created ticket.
+
+
+****
