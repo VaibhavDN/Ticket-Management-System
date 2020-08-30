@@ -13,3 +13,17 @@ Django server to handle booking, updating and viewing ticket information
 - [x] Write the tests for all the endpoints
 
 Note: Attach a screenshot of your postman while testing your application
+
+#### Project structure
+    Ticket Booking System -|
+                           |- TMS -|
+                                   |- settings.py
+                           |- book
+                           |- panel
+                           |- update
+                           |- view
+                           |- templates -|
+                                         |- panel
+                           |- Postman Test
+                           |- manage.py
+                           |- scheduledTask.py
