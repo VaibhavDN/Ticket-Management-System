@@ -11,6 +11,7 @@ from .models import TicketInfo
 @csrf_exempt 
 @api_view(['GET', 'POST', ])
 def bookTicket(request):
+    #print(request.body)
     if not request.GET:
         try:
             body_content = request.body.decode('utf-8')
@@ -38,6 +39,10 @@ def bookTicket(request):
             if(not (_dateList[0].isnumeric() and _dateList[1].isnumeric() and _dateList[2].isnumeric())):
                 raise Exception('Incorrect date format. Should be dd-mm-yyyy')
             
+            _hours = 0
+            _minutes = 0
+            _seconds = 0
+
             _time = json_data['time']
             _timeList = _time.split(':')
 
@@ -48,20 +53,25 @@ def bookTicket(request):
             if(_timeListLen == 3):
                 if(not (_timeList[0].isnumeric() and _timeList[1].isnumeric() and _timeList[2].isnumeric())):
                     raise Exception('Incorrect time format')
+                _hours = _timeList[0]
+                _minutes = _timeList[1]
+                _seconds = _timeList[2]
+
             #* Time format 3:15
             elif(_timeListLen == 2):
                 if(not (_timeList[0].isnumeric() and _timeList[1].isnumeric())):
                     raise Exception('Incorrect time format')
+                _hours = _timeList[0]
+                _minutes = _timeList[1]
+            
             #* Time format 3
             elif(_timeListLen == 1):
                 if(not (_timeList[0].isnumeric())):
                     raise Exception('Incorrect time format')
+                _hours = _timeList[0]
+
             else:
                 raise Exception('Incorrect time format')
-
-            _hours = _timeList[0]
-            _minutes = _timeList[1]
-            _seconds = _timeList[2]
 
             #************************
 
@@ -82,9 +92,10 @@ def bookTicket(request):
             ticketsInfo.time_minutes = _minutes
             ticketsInfo.time_seconds = _seconds
             ticketsInfo.expired = False
-            saved = ticketsInfo.save()
+            ticketsInfo.save()
+            saved = ticketsInfo.pk
 
-            return JsonResponse({'status': True, 'message': "Success"})
+            return JsonResponse({'status': True, 'message': "Success", 'id': saved})
 
         except Exception as e:
             return JsonResponse({'status': False, 'message': str(e)})

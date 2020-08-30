@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMS Web Interface</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <style>
+        .col{
+            margin: 20px 20px 20px 50px;
+            padding: 5px;
+        }
+
+        .input-group{
+            padding: 1px 0px 1px 0px;
+        }
+
+        h4{
+            color: rgb(80, 59, 119);
+        }
+
+        p{
+            margin: 20px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col bookInputDiv">
+            <h4>Ticket Booking</h4>
+            <form name="bookingForm" method="POST" action="http://127.0.0.1:8000/book/">
+                <div class="input-group">
+                    <span class="input-group-prepend"><span class="input-group-text">Enter your firstname </span></span>
+                    <input type="text" class="form-control" id="fname" required>
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-prepend"><span class="input-group-text">Enter your lastname  </span></span>
+                    <input type="text" class="form-control" id="lname" required>
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-prepend"><span class="input-group-text">Enter your phone number </span></span>
+                    <input type="text" class="form-control" id="phno" required>
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-prepend"><span class="input-group-text">Enter the date of movie </span></span>
+                    <input type="text" class="form-control" id="date" required placeholder="2-09-2020">
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-prepend"><span class="input-group-text">Enter the time of movie</span></span>
+                    <input type="text" class="form-control" id="time" required placeholder="15:30:00">
+                </div>
+
+                <input type="button" id="submitBtn" class="btn btn-dark" value="Book" onclick="jsonifyandsubmit()">
+            </form>
+        </div>
+        <div class="col">
+            <h4>Ticket Information:</h4>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script>
+        function jsonifyandsubmit(){
+            let form_data = {
+                "firstname": document.getElementById("fname").value,
+                "lastname": document.getElementById("lname").value,
+                "phone_number": document.getElementById("phno").value,
+                "date": document.getElementById("date").value,
+                "time": document.getElementById("time").value
+            };
+
+            const options = {
+                method: 'POST',
+                body: JSON.stringify(form_data),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            }
+
+            fetch('http://127.0.0.1:8000/book/', options)
+                .then(res => res.json())
+                .then((res)=>{
+                    document.getElementById("result").innerHTML = "status: " + res['status'] + "<br>" + "message: " + res['message'] + "<br>" + "Your ticket Id: " + res['id'] + "<br>" + "You can use the ticket Id to view or update your information and also delete the ticket";
+                    console.log(res);
+                })
+                .catch(e => console.log(e))
+        }
+    </script>
+</body>
+</html>
