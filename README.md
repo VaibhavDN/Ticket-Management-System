@@ -246,7 +246,7 @@ Currently there are 3 types of supported queries
 ****
 
 ### Book endpoint
-#### Note there can NOT be more than 20 entries at a given time
+#### Note: There can NOT be more than 20 entries at a given time
 Fields:
 - firstname (Required)
 - lastname (Required)
@@ -272,7 +272,7 @@ Fields:
             "id": "70a67513-51cd-4487-87eb-817aa9a07a53"
         }
     
-    Some queries return error some common ones are:
+    Some queries return error, common ones are:
     
     Query result (Failure: 20 entries already exist for this time)
     
@@ -290,5 +290,71 @@ Fields:
 
 ****
 
-### Update endpoint
+### Update endpoint [/update/edit/]
 Fields:
+- id (Required)
+- firstname (Optional)
+- lastname (Optional)
+- phone_number (Optional)
+- date (Optional)
+- time (Optional)
+
+Note:
+1. "id" is the only required field field
+2. Id can not be changed
+3. Specify any optional field to replace the old field data with new one
+
+    Query example
+    
+        {
+            "id": "86817bc1-1b27-4aa7-884d-7781cf0de5ac",
+            "time": "18:30",
+            "date": "1-09-2020"
+        }
+        
+    Query result (Success: date and time values are updated)
+    
+        {
+            "status": true,
+            "message": "Success"
+        }
+        
+    Query result (Failure: Id specified is not present in the database)
+    
+        {
+            "status": false,
+            "message": "Id not found"
+        }
+        
+****
+
+### Delete endpoint [/update/delete/]
+Fields:
+- id (Required)
+
+Note:
+1. All the details of the ticket whose "id" is specified are permanently deleted
+2. All other fields will be ignored 
+
+    Query example
+    
+        {
+            "id": "f20a98ba-e833-4108-b196-a2153406395b"
+        }
+        
+    Query result (Success: Ticket details are deleted)
+    
+        {
+            "status": true,
+            "message": "Success"
+        }
+        
+    Query result (Failure: Id not present in the database)
+    
+        {
+            "status": false,
+            "message": "Id not found"
+        }
+        
+****
+
