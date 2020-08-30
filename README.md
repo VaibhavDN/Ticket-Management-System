@@ -95,6 +95,12 @@ Currently there are 3 types of supported queries
             "message": "['“86817bc1-1b27-4aa7-884-7781dc0de5ac” is not a valid UUID.']"
         }
         
+    <details><summary>Click here to view the screenshot</summary>
+        <p align="center">
+            <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/view/viewID.jpg">
+        </p>
+    </details>
+        
 ****
 
 2. "query": "datetime"
@@ -138,6 +144,12 @@ Currently there are 3 types of supported queries
                 "expired": false
             }
         ]
+        
+    <details><summary>Click here to view the screenshot</summary>
+        <p align="center">
+            <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/view/viewDateTime.jpg">
+        </p>
+    </details>
         
     Query example 2
     
@@ -184,6 +196,12 @@ Currently there are 3 types of supported queries
             }
         ]
         
+    <details><summary>Click here to view the screenshot</summary>
+        <p align="center">
+            <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/view/viewDate.jpg">
+        </p>
+    </details>
+        
     Query example 3
     
         {
@@ -228,6 +246,12 @@ Currently there are 3 types of supported queries
                 "expired": false
             }
         ]
+        
+    <details><summary>Click here to view the screenshot</summary>
+        <p align="center">
+            <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/view/viewTime.jpg">
+        </p>
+    </details>
 
 #### Note: If "id" is specified with "query": "datetime" then it will be ignored. To query by "id" use "query": "id" instead.
 ****
@@ -240,6 +264,12 @@ Currently there are 3 types of supported queries
         {
             "query": "all"
         }
+        
+    <details><summary>Click here to view the screenshot</summary>
+        <p align="center">
+            <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/queryAll.jpg">
+        </p>
+    </details>
         
 #### Note: When using "query": "all" all other fields are ignored.
 
@@ -271,6 +301,12 @@ Fields:
             "message": "Success",
             "id": "70a67513-51cd-4487-87eb-817aa9a07a53"
         }
+        
+    <details><summary>Click here to view the screenshot</summary>
+        <p align="center">
+            <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/book/bookSuccess.jpg">
+        </p>
+    </details>
     
     Some queries return error, common ones are:
     
@@ -319,6 +355,13 @@ Note:
             "message": "Success"
         }
         
+    <details><summary>Click here to view the screenshot</summary>
+        <p align="center">
+            <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/edit/updateEditSuccess.jpg">
+            <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/edit/updateEdit.jpg">
+        </p>
+    </details>
+        
     Query result (Failure: Id specified is not present in the database)
     
         {
@@ -349,6 +392,12 @@ Note:
             "message": "Success"
         }
         
+    <details><summary>Click here to view the screenshot</summary>
+        <p align="center">
+            <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/delete/deleteTicket.jpg">
+        </p>
+    </details>
+        
     Query result (Failure: Id not present in the database)
     
         {
@@ -371,6 +420,12 @@ The scheduler is currently scheduled to run every 1 minute. It calculates the di
 To start the scheduler run:
 
     python scheduledTask.py
+    
+<details><summary>Click here to view the screenshot</summary>
+    <p align="center">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/scheduledDelete.jpg">
+    </p>
+</details>
     
 ****
 
@@ -397,6 +452,13 @@ Error:
         "status": false,
         "message": "Incorrect time format"
     }
+    
+<details><summary>Click here to view the screenshot</summary>
+    <p align="center">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/edit/updateEditFailedTime.jpg">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/book/bookFailedTime.jpg">
+    </p>
+</details>
 
 #### Incorrect date format
 
@@ -413,6 +475,13 @@ Error:
         "status": false,
         "message": "Incorrect date format. Should be dd-mm-yyyy"
     }
+    
+<details><summary>Click here to view the screenshot</summary>
+    <p align="center">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/edit/updateEditFailedDate.jpg">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/book/bookFailedDate.jpg">
+    </p>
+</details>
 
 #### Invalid phone number
 Phone number must be of 10 digits
@@ -426,6 +495,12 @@ Error:
         "message": "Phone number must be of 10 digits"
     }
     
+<details><summary>Click here to view the screenshot</summary>
+    <p align="center">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/book/bookFailedPhone.jpg">
+    </p>
+</details>
+    
 #### Id not found
 If id specified is not present in the database following error message will be returned
 
@@ -433,8 +508,14 @@ Error:
 
     {
         "status": false,
-        "message": "Id not found"
+        "message": "Record not found"
     }
+    
+<details><summary>Click here to view the screenshot</summary>
+    <p align="center">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/view/viewFailID.jpg">
+    </p>
+</details>
     
 ****
 
@@ -445,5 +526,10 @@ Site demonstrates how to take input from the user using a HTML form and POST the
 
 Site takes name, date and time from the user as input and returns ticket ID of the newly created ticket.
 
+<details><summary>Click here to view the screenshot</summary>
+    <p align="center">
+        <img width="100%" src="https://github.com/VaibhavDN/Ticket-Booking-System/blob/master/Screenshots/demosite.jpg">
+    </p>
+</details>
 
 ****
