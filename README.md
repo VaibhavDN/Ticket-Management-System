@@ -95,6 +95,8 @@ Currently there are 3 types of supported queries
             "message": "['“86817bc1-1b27-4aa7-884-7781dc0de5ac” is not a valid UUID.']"
         }
         
+****
+
 2. "query": "datetime"
 
     * Specify date (Optional)
@@ -137,7 +139,7 @@ Currently there are 3 types of supported queries
             }
         ]
         
-        Query example 2
+    Query example 2
     
         {
             "query": "datetime",
@@ -181,3 +183,65 @@ Currently there are 3 types of supported queries
                 "expired": false
             }
         ]
+        
+    Query example 3
+    
+        {
+            "query": "datetime",
+            "time": "9:00:00"
+        }
+        
+    Query result 3 Query result 2 (All the tickets having any date and time 9:00:00 are returned)
+    
+        [
+            {
+                "ticketId": "cf5b7944-e4cc-4dd3-aab4-55e84fc03616",
+                "firstname": "Saksham",
+                "lastname": "Modi",
+                "phone_number": 1128789022,
+                "date": "1-09-2020",
+                "time_hours": 9,
+                "time_minutes": 0,
+                "time_seconds": 0,
+                "expired": false
+            },
+            {
+                "ticketId": "0f42d9c8-5eb9-4a80-8a8f-112bb5c572a7",
+                "firstname": "Varun",
+                "lastname": "Mittal",
+                "phone_number": 5558789022,
+                "date": "1-09-2020",
+                "time_hours": 9,
+                "time_minutes": 0,
+                "time_seconds": 0,
+                "expired": false
+            },
+            {
+                "ticketId": "b7e52464-96ca-4b87-a2fb-55ff216a7dcf",
+                "firstname": "Desh",
+                "lastname": "Bandha",
+                "phone_number": 8789022777,
+                "date": "2-09-2020",
+                "time_hours": 9,
+                "time_minutes": 0,
+                "time_seconds": 0,
+                "expired": false
+            }
+        ]
+
+#### Note: If "id" is specified with "query": "datetime" then it will be ignored. To query by "id" use "query": "id" instead.
+****
+
+3. "query": "all"
+    * Returns all the entries in the database
+    
+    Query example
+    
+        {
+            "query": "all"
+        }
+        
+#### Note: When using "query": "all" all other fields are ignored.
+
+****
+
