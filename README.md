@@ -27,3 +27,21 @@ Note: Attach a screenshot of your postman while testing your application
                            |- Postman Test
                            |- manage.py
                            |- scheduledTask.py
+                           
+
+#### API Endpoints
+View ticket information
+
+    /view/
+    
+Book ticket
+
+    /book/
+   
+Update information
+
+    /update/edit/
+    
+Delete ticket
+
+    /update/delete/
