@@ -14,7 +14,7 @@ Django server to handle booking, updating and viewing ticket information
 
 Note: Attach a screenshot of your postman while testing your application
 
-#### Server is hosted at heroku: https://tmsvaibhav.herokuapp.com/
+#### Server is hosted on Heroku: https://tmsvaibhav.herokuapp.com/
 
 #### Endpoints: (POST requests only)
 - Book: https://tmsvaibhav.herokuapp.com/book/
@@ -434,6 +434,7 @@ Note:
 The APScheduler is used to mark and delete the tickets older than 8 hours (scheduledTask.py).
 
 Why APScheduler?
+
 As highlighted in the official documentation, "APScheduler can be used as a cross-platform, application specific replacement to platform specific schedulers, such as the cron daemon or the Windows task scheduler."
 
 It is cross-platform, light-weight python scheduler which is exactly what we needed.
