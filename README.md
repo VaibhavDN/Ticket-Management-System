@@ -1,5 +1,5 @@
-### Ticket-Booking-System
-Django server to handle booking, updating and viewing ticket information
+### Ticket-Management-System
+Django REST API to handle booking, updating, viewing and deleting ticket information
 
 - [x] Book a ticket using a user’s name, phone number, and timings
 - [x] Update a ticket timing
@@ -70,7 +70,7 @@ Fields
 * date  (Optional)
 * time  (Optional)
 
-Currently there are 3 types of supported queries
+Currently, there are 3 types of supported queries
 1. "query": "id"
 
     * Requires an id to be specified
@@ -361,7 +361,7 @@ Fields:
 Note:
 1. "id" is the only required field field
 2. Id can not be changed
-3. Specify any optional field to replace the old field data with new one
+3. Specify any optional field to replace the old field data with the new one
 
     Query example
     
